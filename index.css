@@ -1,0 +1,476 @@
+/*
+TODO: test on windows
+TODO: test removing work height for desktop
+*/
+
+html, body {
+    margin: 0px;
+    background-color: #E1EAFE;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#home {
+    height: 100vh;
+    background-image: url("../assets/avatar.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid #E1EAFE;
+}
+
+#home #horizontalContainer {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    #home #horizontalContainer {
+        background-color: rgba(255, 255, 255, 0.4);
+        -webkit-backdrop-filter: blur(64px);
+        backdrop-filter: blur(64px);
+    }
+
+    #backdrop-warning {
+        display: none;
+    }
+}
+
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    #home #horizontalContainer {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    #backdrop-warning {
+        display: block;
+        position: absolute;
+        margin: 5px;
+        left: 0px;
+        bottom: 0px;
+        color: #FFFFFF;
+        font-size: 12px;
+    }
+}
+
+#home #horizontalContainer #verticalContainer {
+    display: block;
+}
+
+#home #horizontalContainer #avatar {
+    width: 350px;
+    height: auto;
+    border-radius: 175px;
+}
+
+#home #horizontalContainer #verticalContainer p {
+    margin-left: 50px;
+    text-align: left;
+}
+
+#home #horizontalContainer #verticalContainer #displayName {
+    font-size: 64px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+#home #horizontalContainer #verticalContainer #username {
+    font-size: 34px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #FFFFFF;
+    opacity: 0.9;
+}
+
+#home #horizontalContainer #verticalContainer #bio {
+    width: 400px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+#home #horizontalContainer #aboutMeContainer {
+    display: block;
+}
+
+#home #horizontalContainer #links {
+    margin: 25px 0px 0px 50px;
+    padding: 0px;
+    text-align: left;
+}
+
+#home #horizontalContainer #links li {
+    display: inline-block;
+    list-style: none;
+    padding: 8px 10px 8px 10px;
+    background-color: #0F4590;
+    border-radius: 19px;
+}
+
+#home #horizontalContainer #links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+#work {
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+
+#work * {
+    margin: 0px;
+}
+
+#work #contentContainer {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#work #contentContainer #imageContainer .image-stack {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+#work #contentContainer #imageContainer .image-stack__item--top {
+    grid-row: 1;
+    grid-column: 1 / span 6;
+    padding-top: 15%;
+    z-index: 1;
+}
+
+#work #contentContainer #imageContainer .image-stack__item--bottom {
+    grid-column: 4 / -1;
+    grid-row: 1;
+}
+
+#work #contentContainer #imageContainer img {
+    width: 20vw;
+    display: block;
+}
+
+#work #contentContainer #title {
+    color: #000000;
+    font-size: 36px;
+    font-weight: 600;
+    display: block;
+    text-align: left;
+}
+
+#work #contentContainer .subTitle {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 500;
+    display: block;
+    text-align: left;
+}
+
+#work #contentContainer p {
+    width: 25vw;
+    text-align: left;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#work #contentContainer p a {
+    text-decoration: none;
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#work #contentContainer p a i {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.3);
+    vertical-align: middle;
+}
+
+.highlightedText {
+    color: rgba(0, 0, 0, 1);
+}
+
+#footer {
+    height: 20vh;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+
+#footer * {
+    margin: 0px;
+}
+
+#footer #container {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer #container p {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    opacity: 0.2;
+}
+
+@media only screen and (max-width: 800px) {
+    #home #horizontalContainer #avatar {
+        width: 300px;
+        border-radius: 150px;
+    }
+
+    #home #horizontalContainer #verticalContainer p {
+        margin-left: 50px;
+    }
+
+    #home #horizontalContainer #verticalContainer #displayName {
+        font-size: 56px;
+    }
+
+    #home #horizontalContainer #verticalContainer #username {
+        font-size: 30px;
+    }
+
+    #home #horizontalContainer #verticalContainer #bio {
+        font-size: 19px;
+    }
+
+    #home #horizontalContainer #links a {
+        font-size: 17px;
+    }
+
+    #work #contentContainer #title {
+        font-size: 30px;
+    }
+
+    #work #contentContainer .subTitle {
+        font-size: 20px;
+    }
+
+    #work #contentContainer p {
+        width: 40vw;
+        font-size: 17px;
+    }
+
+    #work #contentContainer p a {
+        font-size: 17px;
+    }
+
+    #work #contentContainer p a i {
+        font-size: 22px;
+    }
+
+    #footer #container p {
+        font-size: 20px;
+        font-weight: 600;
+        color: #000000;
+        opacity: 0.2;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    #home #horizontalContainer {
+        display: block;
+    }
+
+    #home #horizontalContainer #avatar {
+        width: 250px;
+        border-radius: 125px;
+        transform: translateY(50px);
+    }
+
+    #home #horizontalContainer #verticalContainer p {
+        margin-left: 0px;
+        text-align: center;
+        transform: translateY(50px);
+    }
+
+    #home #horizontalContainer #verticalContainer #displayName {
+        font-size: 56px;
+    }
+
+    #home #horizontalContainer #verticalContainer #username {
+        font-size: 30px;
+    }
+
+    #home #horizontalContainer #verticalContainer #bio {
+        width: unset;
+        margin-top: -5px;
+        margin-left: 25px;
+        margin-right: 25px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    #home #horizontalContainer #links {
+        margin: 0px;
+        text-align: center;
+        transform: translateY(50px);
+    }
+
+    #work {
+        height: unset;
+        padding-bottom: 100px;
+    }
+
+    #work #contentContainer {
+        display: block;
+        transform: translateY(50px);
+    }
+
+    #work #contentContainer #imageContainer {
+        margin-bottom: 50px;
+    }
+
+    #work #contentContainer #imageContainer .image-stack {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    #work #contentContainer #imageContainer img {
+        width: 60vw;
+    }
+
+    #work #contentContainer #title {
+        font-size: 36px;
+    }
+
+    #work #contentContainer .subTitle {
+        font-size: 24px;
+    }
+
+    #work #contentContainer p {
+        width: unset;
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 20px;
+    }
+
+    #work #contentContainer p a {
+        font-size: 19px;
+    }
+
+    #work #contentContainer p a i {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #home #horizontalContainer #avatar {
+        width: 200px;
+        border-radius: 100px;
+        transform: translateY(25px);
+    }
+
+    #home #horizontalContainer #verticalContainer p {
+        margin-left: 0px;
+        text-align: center;
+        transform: translateY(25px);
+    }
+
+    #home #horizontalContainer #verticalContainer #displayName {
+        font-size: 52px;
+    }
+
+    #home #horizontalContainer #verticalContainer #username {
+        font-size: 26px;
+    }
+
+    #home #horizontalContainer #verticalContainer #bio {
+        font-size: 16px;
+    }
+
+    #home #horizontalContainer #links {
+        transform: translateY(25px);
+    }
+
+    #home #horizontalContainer #links a {
+        font-size: 15px;
+    }
+
+    #work #contentContainer #title {
+        font-size: 32px;
+    }
+
+    #work #contentContainer .subTitle {
+        font-size: 22px;
+    }
+
+    #work #contentContainer p {
+        width: unset;
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 18px;
+    }
+
+    #work #contentContainer p a {
+        font-size: 17px;
+    }
+
+    #work #contentContainer p a i {
+        font-size: 22px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #home {
+        border-bottom: 2px solid #0F4590;
+    }
+
+    @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+        #home #horizontalContainer {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    #work {
+        background-color: #1C1C1C;
+    }
+
+    #work #contentContainer #title {
+        color: #FFFFFF;
+    }
+
+    #work #contentContainer .subTitle {
+        color: #FFFFFF;
+    }
+
+    #work #contentContainer p {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    #work #contentContainer p a {
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    #work #contentContainer p a i {
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    .highlightedText {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    #footer {
+        background-color: #1C1C1C;
+    }
+
+    #footer #container p {
+        color: #FFFFFF;
+    }
+}
