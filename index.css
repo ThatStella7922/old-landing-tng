@@ -1,5 +1,9 @@
 /*
-TODO: fix the fucking white bit at the top when viewed on small phones in portrait mode
+TODO: fix the fucking garbage method that i used to fix "the white bit at the top" issue
+
+also thanks https://gitlab.com/renegadevi for the help, it really gave me some ideas on how to fix this later
+ 
+TODO PREVIOUSLY: fix the fucking white bit at the top when viewed on small phones in portrait mode
 */
 
 html, body {
@@ -189,6 +193,13 @@ html, body {
     */
 
     #home #horizontalContainer #verticalContainer p {
+        display: inline-block;
+        /*
+        due to my stupid, i have no idea why shitting this to an inline block makes the white bit disappear but it just does
+         
+        also dont forget the width 100% below. thanks to https://gitlab.com/renegadevi for the tips
+        */
+        width: 100%;
         margin-left: 0px;
         text-align: center;
         transform: translateY(30vh);
