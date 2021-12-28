@@ -1,6 +1,5 @@
 /*
-TODO: test on windows
-TODO: test removing work height for desktop
+TODO: fix the fucking white bit at the top when viewed on small phones in portrait mode
 */
 
 html, body {
@@ -64,14 +63,6 @@ html, body {
     display: block;
 }
 
-/*
-#home #horizontalContainer #avatar {
-    width: 350px;
-    height: auto;
-    border-radius: 175px;
-}
-*/
-
 #home #horizontalContainer #verticalContainer p {
     margin-left: 50px;
     text-align: left;
@@ -125,85 +116,6 @@ html, body {
     font-weight: 600;
 }
 
-/*
-#work {
-    height: 100vh;
-    box-sizing: border-box;
-    background-color: #FFFFFF;
-}
-
-#work * {
-    margin: 0px;
-}
-
-#work #contentContainer {
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#work #contentContainer #imageContainer .image-stack {
-    display: grid;
-    position: relative;
-    grid-template-columns: repeat(12, 1fr);
-}
-
-#work #contentContainer #imageContainer .image-stack__item--top {
-    grid-row: 1;
-    grid-column: 1 / span 6;
-    padding-top: 15%;
-    z-index: 1;
-}
-
-#work #contentContainer #imageContainer .image-stack__item--bottom {
-    grid-column: 4 / -1;
-    grid-row: 1;
-}
-
-#work #contentContainer #imageContainer img {
-    width: 20vw;
-    display: block;
-}
-
-#work #contentContainer #title {
-    color: #000000;
-    font-size: 36px;
-    font-weight: 600;
-    display: block;
-    text-align: left;
-}
-
-#work #contentContainer .subTitle {
-    color: #000000;
-    font-size: 24px;
-    font-weight: 500;
-    display: block;
-    text-align: left;
-}
-
-#work #contentContainer p {
-    width: 25vw;
-    text-align: left;
-    font-size: 20px;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-#work #contentContainer p a {
-    text-decoration: none;
-    font-size: 19px;
-    color: rgba(0, 0, 0, 0.3);
-}
-
-#work #contentContainer p a i {
-    font-size: 24px;
-    color: rgba(0, 0, 0, 0.3);
-    vertical-align: middle;
-}
-*/
-
 .highlightedText {
     color: rgba(0, 0, 0, 1);
 }
@@ -235,13 +147,6 @@ html, body {
 }
 
 @media only screen and (max-width: 800px) {
-    /*
-    #home #horizontalContainer #avatar {
-        width: 300px;
-        border-radius: 150px;
-    }
-    */
-
     #home #horizontalContainer #verticalContainer p {
         margin-left: 50px;
     }
@@ -261,30 +166,7 @@ html, body {
     #home #horizontalContainer #links a {
         font-size: 17px;
     }
-
-    /*
-    #work #contentContainer #title {
-        font-size: 30px;
-    }
-
-    #work #contentContainer .subTitle {
-        font-size: 20px;
-    }
-
-    #work #contentContainer p {
-        width: 40vw;
-        font-size: 17px;
-    }
-
-    #work #contentContainer p a {
-        font-size: 17px;
-    }
-
-    #work #contentContainer p a i {
-        font-size: 22px;
-    }
-    */
-
+    
     #footer #container p {
         font-size: 20px;
         font-weight: 600;
@@ -333,51 +215,6 @@ html, body {
         margin: 0px;
         text-align: center;
         transform: translateY(30vh);
-    }
-
-    #work {
-        height: unset;
-        padding-bottom: 100px;
-    }
-
-    #work #contentContainer {
-        display: block;
-        transform: translateY(50px);
-    }
-
-    #work #contentContainer #imageContainer {
-        margin-bottom: 50px;
-    }
-
-    #work #contentContainer #imageContainer .image-stack {
-        grid-template-columns: repeat(8, 1fr);
-    }
-
-    #work #contentContainer #imageContainer img {
-        width: 60vw;
-    }
-
-    #work #contentContainer #title {
-        font-size: 36px;
-    }
-
-    #work #contentContainer .subTitle {
-        font-size: 24px;
-    }
-
-    #work #contentContainer p {
-        width: unset;
-        margin-left: 25px;
-        margin-right: 25px;
-        font-size: 20px;
-    }
-
-    #work #contentContainer p a {
-        font-size: 19px;
-    }
-
-    #work #contentContainer p a i {
-        font-size: 24px;
     }
 }
 
