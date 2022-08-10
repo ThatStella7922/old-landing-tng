@@ -2,8 +2,8 @@
 TODO: fix the fucking garbage method that i used to fix "the white bit at the top" issue
 
 also thanks https://gitlab.com/renegadevi for the help, it really gave me some ideas on how to fix this later
- 
-TODO PREVIOUSLY: fix the fucking white bit at the top when viewed on small phones in portrait mode
+
+uhhh also as of 08-09-2022, i modified some of the css, lets hope this doesnt fuck me over
 */
 
 html, body {
@@ -30,7 +30,7 @@ html, body {
     text-align: center;
     height: 100%;
     width: 100%;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 }
@@ -61,10 +61,6 @@ html, body {
         color: #FFFFFF;
         font-size: 12px;
     }
-}
-
-#home #horizontalContainer #verticalContainer {
-    display: block;
 }
 
 #home #horizontalContainer #verticalContainer p {
@@ -101,7 +97,7 @@ html, body {
 
 #home #horizontalContainer #links {
     margin: 25px 0px 0px 50px;
-    padding: 0px;
+    padding: 1px;
     text-align: left;
 }
 
